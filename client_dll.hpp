@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-21 14:53:59.550899300 UTC
+// 2025-02-22 11:14:11.118449200 UTC
 
 #pragma once
 
@@ -2423,7 +2423,7 @@ namespace cs2_dumper {
             namespace C_C4 {
                 constexpr std::ptrdiff_t m_szScreenText = 0x1B20; // char[32]
                 constexpr std::ptrdiff_t m_activeLightParticleIndex = 0x1B40; // ParticleIndex_t
-                constexpr std::ptrdiff_t m_eActiveLightEffect = 0x1B44; // 
+                constexpr std::ptrdiff_t m_eActiveLightEffect = 0x1B44; // C4LightEffect_t
                 constexpr std::ptrdiff_t m_bStartedArming = 0x1B48; // bool
                 constexpr std::ptrdiff_t m_fArmedTime = 0x1B4C; // GameTime_t
                 constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0x1B50; // bool
@@ -2580,7 +2580,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_sToolsOnlyOwnerModelName = 0x108; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_bBuiltRightHanded = 0x1E8; // bool
                 constexpr std::ptrdiff_t m_bAllowFlipping = 0x1E9; // bool
-                constexpr std::ptrdiff_t m_sMuzzleAttachment = 0x1F0; // 
+                constexpr std::ptrdiff_t m_sMuzzleAttachment = 0x1F0; // CAttachmentNameSymbolWithStorage
                 constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x210; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_bLinkedCooldowns = 0x2F0; // bool
                 constexpr std::ptrdiff_t m_iFlags = 0x2F1; // ItemFlagTypes_t
@@ -5651,12 +5651,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_seqIdle = 0x16F0; // HSequence
                 constexpr std::ptrdiff_t m_seqFirePrimary = 0x16F4; // HSequence
                 constexpr std::ptrdiff_t m_seqFireSecondary = 0x16F8; // HSequence
-                constexpr std::ptrdiff_t m_thirdPersonFireSequences = 0x1700; // 
+                constexpr std::ptrdiff_t m_thirdPersonFireSequences = 0x1700; // CUtlVector<HSequence>
                 constexpr std::ptrdiff_t m_hCurrentThirdPersonSequence = 0x1718; // HSequence
                 constexpr std::ptrdiff_t m_nSilencerBoneIndex = 0x171C; // int32
                 constexpr std::ptrdiff_t m_thirdPersonSequences = 0x1720; // HSequence[7]
-                constexpr std::ptrdiff_t m_ClientPreviousWeaponState = 0x1758; // 
-                constexpr std::ptrdiff_t m_iState = 0x175C; // 
+                constexpr std::ptrdiff_t m_ClientPreviousWeaponState = 0x1758; // CSWeaponState_t
+                constexpr std::ptrdiff_t m_iState = 0x175C; // CSWeaponState_t
                 constexpr std::ptrdiff_t m_flCrosshairDistance = 0x1760; // float32
                 constexpr std::ptrdiff_t m_iAmmoLastCheck = 0x1764; // int32
                 constexpr std::ptrdiff_t m_iAlpha = 0x1768; // int32
@@ -5669,7 +5669,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTimeWeaponIdle = 0x1784; // GameTime_t
                 constexpr std::ptrdiff_t m_bFireOnEmpty = 0x1788; // bool
                 constexpr std::ptrdiff_t m_OnPlayerPickup = 0x1790; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_weaponMode = 0x17B8; // 
+                constexpr std::ptrdiff_t m_weaponMode = 0x17B8; // CSWeaponMode
                 constexpr std::ptrdiff_t m_flTurningInaccuracyDelta = 0x17BC; // float32
                 constexpr std::ptrdiff_t m_vecTurningInaccuracyEyeDirLast = 0x17C0; // Vector
                 constexpr std::ptrdiff_t m_flTurningInaccuracy = 0x17CC; // float32
@@ -6096,7 +6096,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_szMuzzleFlashThirdPersonParticle = 0xA50; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_szMuzzleFlashThirdPersonParticleAlt = 0xB30; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_szTracerParticle = 0xC10; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
-                constexpr std::ptrdiff_t m_GearSlot = 0xCF0; // 
+                constexpr std::ptrdiff_t m_GearSlot = 0xCF0; // gear_slot_t
                 constexpr std::ptrdiff_t m_GearSlotPosition = 0xCF4; // int32
                 constexpr std::ptrdiff_t m_DefaultLoadoutSlot = 0xCF8; // loadout_slot_t
                 constexpr std::ptrdiff_t m_sWrongTeamMsg = 0xD00; // CUtlString
@@ -6721,7 +6721,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_isInit = 0x1260; // bool
                 constexpr std::ptrdiff_t m_eyeAttachment = 0x1261; // AttachmentHandle_t
                 constexpr std::ptrdiff_t m_chestAttachment = 0x1262; // AttachmentHandle_t
-                constexpr std::ptrdiff_t m_pPredictionOwner = 0x1268; // 
+                constexpr std::ptrdiff_t m_pPredictionOwner = 0x1268; // CBasePlayerController*
                 constexpr std::ptrdiff_t m_fNewestAlphaThinkTime = 0x1270; // GameTime_t
             }
             // Parent: C_BaseModelEntity
@@ -6829,7 +6829,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bRadarFlash = 0x14A0; // bool
                 constexpr std::ptrdiff_t m_pBombDefuser = 0x14A4; // CHandle<C_CSPlayerPawn>
                 constexpr std::ptrdiff_t m_fLastDefuseTime = 0x14A8; // GameTime_t
-                constexpr std::ptrdiff_t m_pPredictionOwner = 0x14B0; // 
+                constexpr std::ptrdiff_t m_pPredictionOwner = 0x14B0; // CBasePlayerController*
                 constexpr std::ptrdiff_t m_vecC4ExplodeSpectatePos = 0x14B8; // Vector
                 constexpr std::ptrdiff_t m_vecC4ExplodeSpectateAng = 0x14C4; // QAngle
                 constexpr std::ptrdiff_t m_flC4ExplodeSpectateDuration = 0x14D0; // float32
